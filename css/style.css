@@ -1,1 +1,140 @@
+:root {
+  --c12: #000000;
+  --c11: #111111;
+  --c10: #2e2e2e;
+  --c09: #404040;
+  --c08: #595959;
+  --c07: #717171;
+  --c06: #9c9c9c;
+  --c05: #b2b2b2;
+  --c04: #cccccc;
+  --c03: #dedede;
+  --c02: #ededed;
+  --c01: #f7f7f7;
+  --c00: #ffffff;
+  --p05: #332200;
+  --p04: #664400;
+  --p03: #a66f00;
+  --p02: #e4a30b;
+  --p01: #ffbb00;
+  --poppins-semibold: "Poppins", Arial, Helvetica, sans-serif;
+  --poppins-medium: "Poppins", Arial, Helvetica, sans-serif;
+  --roboto-medium: "Roboto", Arial, Helvetica, sans-serif;
+  --roboto-regular: "Roboto", Arial, Helvetica, sans-serif;
+  --merriweather-italic: "Merriweather", Arial, Helvetica, sans-serif;
+}
 
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+.header-bg {
+  background-color: var(--c12);
+}
+
+.header {
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu a {
+  color: var(--c00);
+  padding: 16px 0px;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.77;
+  position: relative;
+}
+
+.header-menu a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background-color: var(--c00);
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header-menu a:hover:after {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header-menu {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .header-menu a {
+    background-color: var(--c11);
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+
+  .header-menu a:hover {
+    background-color: var(--c10);
+  }
+
+  .header-menu a:after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px;
+  }
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
