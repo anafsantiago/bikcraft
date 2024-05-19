@@ -1,0 +1,18 @@
+.termos-descricao {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.termos-descricao h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.termos-descricao p + h2 {
+  margin-top: 48px;
+}
+
+.termos-descricao p {
+  max-width: 75ch;
+  margin-top: 24px;
+}

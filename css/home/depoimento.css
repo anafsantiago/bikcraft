@@ -31,6 +31,7 @@
   font-family: var(--font-3);
   font-weight: 900;
   font-style: italic;
+  max-width: 32ch;
   position: relative;
 }
 
@@ -77,14 +78,8 @@
 
   .depoimento-informacoes {
     padding: 40px 20px;
-    align-self: center;
     justify-self: center;
     position: initial;
-  }
-
-  .depoimento-informacoes p,
-  .depoimento-informacoes span {
-    text-align: center;
   }
 
   .depoimento-informacoes span::after,
