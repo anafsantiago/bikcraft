@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: var(--cor-p1);
+  overflow: hidden;
 }
 
 .depoimento img {
@@ -9,7 +10,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left;
 }
 
 .depoimento-informacoes {
@@ -69,7 +69,6 @@
   .depoimento {
     grid-template-columns: 1fr;
     text-align: center;
-    overflow: hidden;
   }
 
   .depoimento img {
