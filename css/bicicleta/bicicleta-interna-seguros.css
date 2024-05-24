@@ -1,0 +1,28 @@
+.bicicleta-interna-seguros-bg {
+  background-color: var(--cor-11);
+  box-shadow: inset 0px 120px var(--cor-0), inset 0px -120px var(--cor-12);
+}
+
+.bicicleta-interna-seguros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.bicicleta-interna-seguros div:nth-child(2) {
+  padding-bottom: 180px;
+  padding-top: 180px;
+}
+
+.bicicleta-interna-seguros p {
+  margin-top: 32px;
+}
+
+.bicicleta-interna-seguros a {
+  margin-top: 20px;
+}
+
+.bicicleta-interna-seguros img {
+  height: 100%;
+  object-fit: cover;
+}

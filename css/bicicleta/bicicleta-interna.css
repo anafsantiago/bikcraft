@@ -1,0 +1,115 @@
+.bicicleta-interna-bg {
+  background-color: var(--cor-11);
+}
+
+.bicicleta-interna {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  padding-bottom: 60px;
+}
+
+.bicicleta-interna-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bicicleta-interna-fotos img {
+  flex: 1;
+  min-width: 200px;
+}
+
+.bicicleta-interna-fotos img:first-child {
+  min-width: 100%;
+}
+
+.bicicleta-interna-conteudo > p {
+  margin-bottom: 32px;
+}
+
+.bicicleta-interna-comprar {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 8px 12px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-items: start;
+}
+
+.bicicleta-interna-comprar a {
+  grid-row: span 2;
+}
+
+.bicicleta-interna-comprar img {
+  width: 16px;
+  height: 16px;
+}
+
+.bicicleta-interna-comprar span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--cor-12);
+  border-radius: 4px;
+  padding: 4px 8px;
+  max-width: max-content;
+}
+
+.bicicleta-interna-conteudo h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  margin-bottom: 12px;
+}
+
+.bicicleta-interna-informacoes,
+.bicicleta-interna-ficha {
+  background-color: var(--cor-12);
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.bicicleta-interna-informacoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.bicicleta-interna-informacoes img {
+  width: 24px;
+  margin-bottom: 4px;
+}
+
+.bicicleta-interna-informacoes h3 {
+  margin-bottom: 8px;
+}
+
+.bicicleta-interna-ficha li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.bicicleta-interna-ficha li + li {
+  border-top: 1px solid var(--cor-11);
+}
+
+@media (max-width: 800px) {
+  .bicicleta-interna {
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+  }
+
+  .bicicleta-interna-fotos {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .bicicleta-interna-comprar,
+  .bicicleta-interna-informacoes {
+    grid-template-columns: 1fr;
+  }
+}
