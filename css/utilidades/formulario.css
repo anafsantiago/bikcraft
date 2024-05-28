@@ -3,32 +3,48 @@
   border-radius: 0 4px 4px 0;
 }
 
-form {
+.form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-.form .email,
-.form .mensagem {
+.form .col-2 {
   grid-column: 1/-1;
 }
 
-form div {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4px;
-  width: 100%;
+.form label {
+  display: block;
+  margin-bottom: 4px;
+  font: 500 1rem/1.5 "Poppins", sans-serif;
 }
 
-form input,
-form textarea {
-  padding: 12px;
-  border-radius: 4px;
+.form input,
+.form textarea {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
   background-color: var(--cor-1);
   border: 1px solid var(--cor-2);
+  color: var(--cor-7);
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-button {
-  border: none;
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--cor-p1);
+  background: var(--cor-0);
+  box-shadow: 0 0 0 2px #fea;
+}
+
+@media (max-width: 600px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form .col-2 {
+    grid-column: 1;
+  }
 }
