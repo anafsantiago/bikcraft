@@ -1,70 +1,96 @@
-.contato-bg {
-  background-color: var(--cor-11);
-  box-shadow: inset 0px -400px var(--cor-1);
-  padding-bottom: 120px;
+#contato {
+  background: linear-gradient(var(--cor-11) 600px, var(--cor-1) 0px);
 }
 
 .contato {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 5fr 7fr;
+}
+
+.contato-dados,
+.contato-form {
+  padding: 60px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .contato-dados {
   background-color: var(--cor-12);
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px 0 0 4px;
   padding: 60px 60px 120px 60px;
 }
 
-.contato h2 {
+.contato-dados h2 {
   margin-bottom: 60px;
 }
 
 .contato-endereco,
-.contato-email {
+.contato-meios {
   margin-bottom: 32px;
 }
 
-.contato-telefone {
+.contato-endereco {
+  background: url(../../img/icones/local.svg) no-repeat 0px 2px;
+  padding-left: 28px;
+}
+
+.contato-endereco p {
+  margin-bottom: 8px;
+}
+
+.contato-meios a:hover {
+  color: var(--cor-0);
+}
+
+.contato-meios a:first-child {
+  background: url(../../img/icones/email.svg) no-repeat 0px 2px;
+}
+
+.contato-meios a:nth-child(2) {
+  margin-bottom: 32px;
+}
+
+.contato-meios a:last-child {
+  background: url(../../img/icones/telefone.svg) no-repeat 0px 2px;
   margin-bottom: 60px;
+}
+
+.contato-meios a {
+  margin-bottom: 8px;
+  display: block;
+  max-width: max-content;
+  padding-left: 28px;
 }
 
 .contato-redes {
   display: flex;
   gap: 32px;
+  padding-left: 28px;
 }
 
-.contato-form {
-  background-color: var(--cor-0);
-  border-radius: 0 4px 4px 0;
-  width: 700px;
-}
+@media (max-width: 800px) {
+  .contato {
+    grid-template-columns: 1fr;
+  }
 
-form {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 20px;
-  padding: 60px;
-}
+  .contato-dados,
+  .contato-form {
+    padding: 20px;
+  }
 
-.form .email,
-.form .mensagem {
-  grid-column: 1/-1;
-}
+  .contato-dados {
+    border-radius: 4px 4px 0 0;
+  }
 
-form div {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4px;
-}
+  .contato-form {
+    border-radius: 0 0 4px 4px;
+  }
 
-form input,
-form textarea {
-  padding: 12px;
-  border-radius: 4px;
-  background-color: var(--cor-1);
-  border: 1px solid var(--cor-2);
-}
+  .contato-dados h2,
+  .contato-meios a:last-child {
+    margin-bottom: 32px;
+  }
 
-button {
-  border: none;
+  .contato-redes {
+    margin-bottom: 12px;
+  }
 }
