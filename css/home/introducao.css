@@ -23,15 +23,9 @@
   margin-bottom: 20px;
 }
 
-.introducao-foto img {
-  width: 100%;
+.introducao img {
   height: 100%;
   object-fit: cover;
-  object-position: top left;
-}
-
-.introducao-foto-responsivo {
-  display: none;
 }
 
 @media (max-width: 800px) {
@@ -56,13 +50,5 @@
 
   .introducao p {
     margin-bottom: 20px;
-  }
-
-  .introducao-foto {
-    display: none;
-  }
-
-  .introducao-foto-responsivo {
-    display: block;
   }
 }
