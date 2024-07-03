@@ -10,6 +10,11 @@
 .perguntas dd {
   max-width: 80ch;
   padding-left: 20px;
+  display: none;
+}
+
+.perguntas dd.ativo {
+  display: block;
 }
 
 .perguntas dl > div {
@@ -21,16 +26,20 @@
   background-color: var(--cor-1);
 }
 
-.perguntas dt {
+.perguntas button {
   margin-bottom: 16px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   cursor: pointer;
   gap: 8px;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
 }
 
-.perguntas dt::before {
+.perguntas button::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -38,13 +47,18 @@
   background-color: var(--cor-p1);
 }
 
-.perguntas dt::after {
+.perguntas button::after {
   content: "";
   display: block;
   width: 14px;
   height: 6px;
   background: url(/img/icones/seta-abrir.svg);
   margin-right: 20px;
+}
+
+.perguntas button:hover::after,
+.perguntas button[aria-expanded="true"]::after {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 800px) {
