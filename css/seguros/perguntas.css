@@ -10,10 +10,13 @@
 .perguntas dd {
   max-width: 80ch;
   padding-left: 20px;
+}
+
+.js .perguntas dd {
   display: none;
 }
 
-.perguntas dd.ativo {
+.js .perguntas dd.ativo {
   display: block;
 }
 

@@ -38,3 +38,29 @@ function clicarPergunta(pergunta) {
 }
 
 perguntas.forEach(clicarPergunta);
+
+//Galeria de bicicletas
+
+const galeria = document.querySelectorAll(".bicicleta-interna-fotos img");
+const galeriaContainer = document.querySelector(".bicicleta-interna-fotos");
+
+/** @param {MouseEvent} event */
+function trocarImagem(event) {
+  const img = event.currentTarget;
+  const media = window.matchMedia("(min-width: 1000px)").matches; //Verifica se o tamanho da tela é de mais de 1000 px. matchMedia() verifica o tamanho da tela
+  if (media) {
+    //Só faz essa mudança se a tela for maior do que 1000px
+    galeriaContainer.prepend(img); //Troca a posição da img clicada para ser a primeira da lista, que é a maior
+  }
+}
+
+function clicarImagens(imagem) {
+  imagem.addEventListener("click", trocarImagem);
+}
+
+galeria.forEach(clicarImagens);
+
+//Iniciando a classe do plugin de animação
+if (window.SimpleAnime) {
+  new SimpleAnime();
+}
